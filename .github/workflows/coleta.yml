@@ -1,0 +1,55 @@
+name: coleta-concessoes
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 9 * * 1"   # segundas, 06:17 BRT
+
+permissions:
+  contents: write
+
+concurrency:
+  group: coleta-concessoes
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Recuperar saídas anteriores (cache incremental) da branch dados
+        run: |
+          if git ls-remote --exit-code --heads origin dados >/dev/null 2>&1; then
+            git fetch --depth=1 origin dados
+            mkdir -p saidas
+            git --work-tree=saidas checkout origin/dados -- . || true
+            git reset -q
+          fi
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependências
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq unar libarchive-tools p7zip-full
+          pip install -q -r requirements.txt
+
+      - name: Testes
+        run: python -m pytest -q
+
+      - name: Coletar
+        run: python -m coletor.main
+
+      - name: Publicar na branch dados (commit único, sobrescrito)
+        run: |
+          cd saidas
+          git init -q -b dados
+          git config user.name "coletor-bot"
+          git config user.email "coletor-bot@users.noreply.github.com"
+          git add -A
+          git commit -q -m "dados $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" dados
