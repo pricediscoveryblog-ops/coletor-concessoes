@@ -1,0 +1,9 @@
+id;acionista;participacao_pct;papel;fonte
+F-VARAU;Infra BR V Rodovias Holding III S.A. (Pátria);100;controladora direta (subholding);DF 2023 da Via Araucária (Central de Balanços)
+F-VCAMPO;Reúne Rodovias Holding II S.A. (Pátria);100;controladora direta (subholding) - validar %;Agência iNFRA 30/10/2025 (vencedora do leilão)
+S-L30;Pátria Investimentos (fundos);70;controlador - validar;artigo Unesp 2022
+S-L30;GIC;30;sócio - validar;artigo Unesp 2022
+S-L28;Vinci Highways;55;controlador;Vinci (aquisição 2022)
+S-L28;GIC;45;sócio - validar;Agência iNFRA (venda da Pátria à GIC)
+F-EPRPR;EPR;;controlador (consórcio Infraestrutura PR) - validar %;Tribuna PR (leilão do Lote 4)
+F-EPRPR;Perfin Voyager FIP;;sócio (consórcio Infraestrutura PR) - validar %;Tribuna PR (leilão do Lote 4)
