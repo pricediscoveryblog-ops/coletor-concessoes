@@ -68,14 +68,19 @@ def test_cadastro_aliases_e_regiao():
     assert list(m.id_concessao) == ["F-ERM", "F-VCOST", "F-VCRI", "F-ECAP", "S-L01", "S-L22", ""]
 
 
-def test_artesp_padronizar_detecta_colunas():
-    bruto = ("DATA;CONCESSIONARIA;PRACA;SENTIDO;KM;CAT_1;CAT_2;TOTAL\n"
-             "2025-01-01;L01-AUTOBAN;P1 Campo Limpo;N;30,5;100;20;120\n"
-             "2025-01-02;L01-AUTOBAN;P1 Campo Limpo;N;30,5;110;25;135\n")
-    longo, d = artesp.padronizar(ler_csv_br(bruto))
-    assert d["status"] == "ok" and "KM" not in d["medidas"]
-    tot = longo[longo.medida == "TOTAL"].groupby("mes").valor.sum()
-    assert tot.iloc[0] == 255
+def test_artesp_padronizar_eixos_e_pagantes():
+    bruto = ("DATA,LOTE,PRACA,SENTIDO,TIPO_CABINE,TIPO_PASSAGEM,TP_PAGAMENTO,LEVE_EIXOS_2,MOTO_EIXOS_2,PESADO_EIXOS_2,LEVE_EIXOS_3,PESADO_EIXOS_5\n"
+             "2020-01-01,L01-AUTOBAN,PERUS - NORTE,NORTE,MANUAL,ISENTAS,NÃO SE APLICA/ISENTO/EVASÃO,177,0,29,0,0\n"
+             "2020-01-01,L01-AUTOBAN,PERUS - NORTE,NORTE,AUTOMATICA,PAGANTE,TAG,1000,10,100,4,2\n"
+             "2020-01-02,L01-AUTOBAN,PERUS - NORTE,NORTE,AUTOMATICA,PAGANTE,TAG,500,0,0,0,0\n")
+    out, d = artesp.padronizar(ler_csv_br(bruto, sep=","))
+    assert d["status"] == "ok" and d["n_colunas_eixos"] == 5
+    pag = out[out.pagante].iloc[0]
+    assert pag.veic_leve == 1504 and pag.veic_pesado == 102 and pag.veic_moto == 10
+    assert pag.eixos_total == 1500 * 2 + 4 * 3 + 10 * 2 + 100 * 2 + 2 * 5
+    assert pag.veic_eq == 1500 * 1 + 4 * 1.5 + 10 * 0.5 + 100 * 2 + 2 * 5
+    isento = out[~out.pagante].iloc[0]
+    assert isento.veic_leve == 177 and isento.veic_pesado == 29
 
 
 def test_artesp_colunas_desconhecidas_nao_quebra():
