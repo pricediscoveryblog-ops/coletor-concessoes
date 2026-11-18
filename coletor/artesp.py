@@ -58,34 +58,62 @@ def _achar(colunas: list[str], *padroes: str) -> str | None:
     return None
 
 
+PARSER_VERSAO = "2"
+# Multiplicador tarifário do Programa de Concessões de SP (conhecimento prévio, validar):
+# leve = eixos/2 (auto 2 eixos = 1 tarifa), pesado = nº de eixos, moto = 0,5.
+PADRAO_EIXOS = re.compile(r"^(LEVE|MOTO|PESADO)_EIXOS_(\d+)$")
+NAO_PAGANTE = re.compile(r"ISENT|EVAS|VIOLA", re.I)
+
+
+def multiplicador(tipo: str, eixos: int) -> float:
+    if tipo == "MOTO":
+        return 0.5
+    if tipo == "LEVE":
+        return eixos / 2
+    return float(eixos)
+
+
 def padronizar(df: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
-    """Detecta colunas e devolve formato longo: conc, praça, sentido, mes, medida, valor."""
+    """Detecta colunas e agrega por praça x sentido x mês x tipo de passagem.
+
+    Leiaute ARTESP (2020+): DATA, LOTE, PRACA, SENTIDO, TIPO_CABINE, TIPO_PASSAGEM,
+    TP_PAGAMENTO e colunas {LEVE|MOTO|PESADO}_EIXOS_N com contagem de veículos.
+    """
     df.columns = [normalizar_nome(c).replace(" ", "_") for c in df.columns]
     cols = list(df.columns)
     c_data = _achar(cols, r"^DATA", r"DIA", r"^DT")
     c_conc = _achar(cols, r"CONCESSIONARIA", r"^LOTE")
     c_praca = _achar(cols, r"PRACA", r"^PP$", r"PEDAGIO")
     c_sent = _achar(cols, r"SENTIDO")
-    mapa = {"data": c_data, "concessionaria": c_conc, "praca": c_praca, "sentido": c_sent}
+    c_pass = _achar(cols, r"TIPO_PASSAGEM")
+    c_pag = _achar(cols, r"TP_PAGAMENTO", r"PAGAMENTO")
+    mapa = {"data": c_data, "concessionaria": c_conc, "praca": c_praca, "sentido": c_sent,
+            "tipo_passagem": c_pass, "tipo_pagamento": c_pag}
     if not (c_data and c_conc and c_praca):
         return pd.DataFrame(), {"colunas": cols, "mapa": mapa, "status": "colunas_nao_identificadas"}
-    ident = {c_data, c_conc, c_praca, c_sent}
-    medidas = [c for c in cols if c not in ident and numero_br(df[c].head(200)).notna().mean() > 0.9
-               and not re.search(r"KM|LAT|LON|ANO|MES|CODIGO|^ID|RA$|^RA_", c)]
-    base = pd.DataFrame({
+    eixos = [(c, *PADRAO_EIXOS.match(c).groups()) for c in cols if PADRAO_EIXOS.match(c)]
+    if not eixos:
+        return pd.DataFrame(), {"colunas": cols, "mapa": mapa, "status": "sem_colunas_de_eixos"}
+    out = pd.DataFrame({
         "concessionaria_fonte": df[c_conc].str.strip(),
         "praca": df[c_praca].str.strip(),
         "sentido": df[c_sent].str.strip() if c_sent else "",
         "mes": mes_ano(df[c_data]),
+        "tipo_passagem": df[c_pass].str.strip() if c_pass else "",
+        "tipo_pagamento": df[c_pag].str.strip() if c_pag else "",
     })
-    longo = []
-    for m in medidas:
-        t = base.copy()
-        t["medida"] = m
-        t["valor"] = numero_br(df[m])
-        longo.append(t)
-    out = pd.concat(longo, ignore_index=True) if longo else pd.DataFrame()
-    return out, {"colunas": cols, "mapa": mapa, "medidas": medidas, "status": "ok"}
+    for nome in ("veic_leve", "veic_pesado", "veic_moto", "eixos_total", "veic_eq"):
+        out[nome] = 0.0
+    for c, tipo, n in eixos:
+        v = numero_br(df[c]).fillna(0)
+        n = int(n)
+        out[f"veic_{tipo.lower()}"] += v
+        out["eixos_total"] += v * n
+        out["veic_eq"] += v * multiplicador(tipo, n)
+    out["pagante"] = ~out["tipo_passagem"].str.contains(NAO_PAGANTE)
+    chaves = ["concessionaria_fonte", "praca", "sentido", "mes", "tipo_passagem", "tipo_pagamento", "pagante"]
+    out = out.groupby(chaves, as_index=False).sum(numeric_only=True)
+    return out, {"colunas": cols, "mapa": mapa, "n_colunas_eixos": len(eixos), "status": "ok"}
 
 
 def ler_pasta(pasta: Path) -> tuple[pd.DataFrame, list[dict]]:
@@ -102,15 +130,15 @@ def ler_pasta(pasta: Path) -> tuple[pd.DataFrame, list[dict]]:
             df = ler_csv_br(bruto, sep=sep)
         longo, d = padronizar(df)
         d["arquivo"] = arq.name
-        d["amostra"] = df.head(3).to_dict("records")
+        d["amostra"] = df.head(1).to_dict("records") if d.get("status") != "ok" else []
         diag.append(d)
         if not longo.empty:
             partes.append(longo)
     if not partes:
         return pd.DataFrame(), diag
     df = pd.concat(partes, ignore_index=True)
-    chaves = ["concessionaria_fonte", "praca", "sentido", "mes", "medida"]
-    return df.groupby(chaves, as_index=False)["valor"].sum(), diag
+    chaves = ["concessionaria_fonte", "praca", "sentido", "mes", "tipo_passagem", "tipo_pagamento", "pagante"]
+    return df.groupby(chaves, as_index=False).sum(numeric_only=True), diag
 
 
 def coletar(manifesto: dict) -> tuple[pd.DataFrame, list[dict]]:
@@ -120,7 +148,7 @@ def coletar(manifesto: dict) -> tuple[pd.DataFrame, list[dict]]:
     for ano, r in recursos_diarios().items():
         chave = f"artesp_{ano}"
         arq_cache = cache / f"{chave}.parquet"
-        versao = r.get("last_modified") or r.get("created") or ""
+        versao = PARSER_VERSAO + "|" + (r.get("last_modified") or r.get("created") or "")
         if arq_cache.exists() and manifesto.get(chave) == versao:
             partes.append(pd.read_parquet(arq_cache))
             continue
