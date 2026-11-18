@@ -1,0 +1,73 @@
+name: financeiro-spes
+
+# Demonstrações (CVM DFP/ITR), provisão de manutenção, debêntures (SND + ANBIMA) e acionistas (FRE) das SPEs.
+# Usa o código público do Price Discovery Scanning (universo-setorial) e publica na branch dados-financeiro.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 10 * * 2"   # terças, 07:41 BRT (ITR/DFP entram na CVM ao longo da semana)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: financeiro-spes
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Código do Price Discovery Scanning (repo público)
+        run: git clone --depth 1 https://github.com/pricediscoveryblog-ops/universo-setorial.git ../universo-setorial
+
+      - name: Recuperar saídas anteriores (histórico de debêntures) da branch dados-financeiro
+        run: |
+          if git ls-remote --exit-code --heads origin dados-financeiro >/dev/null 2>&1; then
+            git fetch --depth=1 origin dados-financeiro
+            mkdir -p saidas_fin
+            git --work-tree=saidas_fin checkout origin/dados-financeiro -- . || true
+            git reset -q
+          fi
+
+      - name: Cache dos ZIPs da CVM
+        uses: actions/cache@v4
+        with:
+          path: cache_cvm
+          key: cvm-spes-${{ github.run_id }}
+          restore-keys: |
+            cvm-spes-
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependências
+        run: |
+          pip install -q -r requirements.txt
+          pip install -q -r ../universo-setorial/requirements.txt
+
+      - name: Testes
+        env:
+          UNIVERSO_DIR: ../universo-setorial
+        run: python -m pytest -q
+
+      - name: Coletar
+        env:
+          PYTHONUNBUFFERED: "1"
+          UNIVERSO_DIR: ../universo-setorial
+          CVM_CACHE: cache_cvm
+        run: python -m coletor.financeiro
+
+      - name: Publicar na branch dados-financeiro (commit único, sobrescrito)
+        run: |
+          cd saidas_fin
+          git init -q -b dados-financeiro
+          git config user.name "coletor-bot"
+          git config user.email "coletor-bot@users.noreply.github.com"
+          git add -A
+          git commit -q -m "financeiro $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" dados-financeiro
