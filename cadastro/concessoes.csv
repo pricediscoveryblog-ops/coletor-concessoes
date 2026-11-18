@@ -29,8 +29,8 @@ F-VARAU;VIA ARAUCÁRIA;Federal;ANTT;PR;PR;460;BR-277/BR-373/BR-476 + estaduais;C
 F-MOTPR;MOTIVA PARANÁ;Federal;ANTT;PR;PR;570;BR-376/BR-373 + estaduais;Concessão comum;Motiva;agenciainfra_2025-10-31;Lote 3 PR - PRVias (trechos estaduais delegados à União);MOTIVA PARANÁ|PRVIAS|PR VIAS;Mesmas praças de PRVIAS (2025) na base da ANTT;59196897000113;;
 F-VCAMPO;VIA CAMPO;Federal;ANTT;PR;PR;433;BR-369/BR-163 + estaduais;Concessão comum;Pátria;agenciainfra_2025-10-31;Lote 5 PR - PRVias (trechos estaduais delegados à União);VIA CAMPO;"Arrematado por Reúne Rodovias Holding II (Pátria); operação desde 16/04/2026";63520667000135;;
 F-EPRVM;EPR VIA MINEIRA;Federal;ANTT;MG;MG;233;BR-040;Concessão comum;EPR;conhecimento_previo_validar;;EPR VIA MINEIRA|VIA MINEIRA;;;;
-F-N364;NOVA 364;Federal;ANTT;RO;RO;721;BR-364;Concessão comum;;;;NOVA 364;;;;
-F-N381;NOVA 381;Federal;ANTT;MG;MG;304;BR-381;Concessão comum;;;;NOVA 381;;;;
+F-N364;NOVA 364;Federal;ANTT;RO;RO;721;BR-364;Concessão comum;Nova Rodovias;agenciainfra 2026-10-09;;NOVA 364;;;;
+F-N381;NOVA 381;Federal;ANTT;MG;MG;304;BR-381;Concessão comum;Nova Rodovias;agenciainfra 2026-10-09;;NOVA 381;;;;
 F-PANT;PANTANAL;Federal;ANTT;MS;MS;846;BR-163;Concessão comum;Motiva;conhecimento_previo_validar;;PANTANAL|MSVIA|MSVIA/PANTANAL;MSVia renomeada Motiva Pantanal (validar);19642306000170;;
 F-NDUTRA;NOVADUTRA;Federal;ANTT;SP;SP/RJ;;BR-116;Concessão comum;Motiva;conhecimento_previo_validar;;NOVADUTRA;Antecessora da RIOSP na BR-116;;;
 F-RIOSP;RIOSP;Federal;ANTT;SP;SP/RJ;680;BR-116/BR-101;Concessão comum;Motiva;conhecimento_previo_validar;;RIOSP|RIO-SP;;44319688000142;;
@@ -41,9 +41,9 @@ F-VBAHIA;VIA BAHIA;Federal;ANTT;BA;BA;;BR-116/BR-324;Concessão comum;;;;VIA BAH
 F-VBRASIL;VIA BRASIL;Federal;ANTT;MT;MT/PA;969;BR-163/BR-230;Concessão comum;Conasa/Zeta (consórcio);fonte_artigo_unesp_2022;;VIA BRASIL|VIABRASIL|CONCESSIONÁRIA VIA BRASIL BR-163;;;;
 F-VCOST;VIA COSTEIRA;Federal;ANTT;SC;SC;219;BR-101;Concessão comum;Motiva;conhecimento_previo_validar;;VIA COSTEIRA|VIACOSTEIRA|CCR VIA COSTEIRA;;36763716000198;;
 F-VSUL;VIA SUL;Federal;ANTT;RS;RS;474;BR-290/BR-101/BR-386/BR-448;Concessão comum;Motiva;conhecimento_previo_validar;;VIA SUL;;32161500000100;;
-F-WAY153;WAY 153;Federal;ANTT;GO;GO/MG;526;BR-153/BR-262;Concessão comum;;;;WAY 153;;;;
-F-WAY262;WAY 262;Federal;ANTT;MG;MG;440;BR-262;Concessão comum;;;;WAY 262;;;;
-F-WAY364;WAY 364;Federal;ANTT;GO;GO/MT;482;BR-364/BR-060;Concessão comum;;;;WAY 364;;;;
+F-WAY153;WAY 153;Federal;ANTT;GO;GO/MG;526;BR-153/BR-262;Concessão comum;WAY/Kinea;kinea.com.br/agenciainfra 2026-11-18;;WAY 153;;;;
+F-WAY262;WAY 262;Federal;ANTT;MG;MG;440;BR-262;Concessão comum;WAY/Kinea;kinea.com.br 2026-11-18;;WAY 262;;;;
+F-WAY364;WAY 364;Federal;ANTT;GO;GO/MT;482;BR-364/BR-060;Concessão comum;WAY/Kinea;kinea.com.br/agenciainfra 2026-11-18;;WAY 364;;;;
 S-L01;AUTOBAN;Estadual;ARTESP;SP;SP;;SP-330/SP-348;Concessão comum;Motiva;conhecimento_previo_validar;Lote 01;L01|AUTOBAN;;02451848000162;-23.19;-46.88
 S-L03;TEBE;Estadual;ARTESP;SP;SP;;;Concessão comum;;;Lote 03;L03|TEBE;Lote antigo (dados até o fim do contrato);;-20.95;-48.48
 S-L09;TRIÂNGULO DO SOL;Estadual;ARTESP;SP;SP;;;Concessão comum;;;Lote 09;L09|TRIANGULO DO SOL;;;-21.6;-48.36
@@ -52,7 +52,7 @@ S-L06;INTERVIAS;Estadual;ARTESP;SP;SP;;;Concessão comum;Arteris;conhecimento_pr
 S-L07;ROTA DAS BANDEIRAS;Estadual;ARTESP;SP;SP;;;Concessão comum;;;Lote 07;L07|ROTA DAS BANDEIRAS;;10647979000148;-22.9;-47.06
 S-L11;RENOVIAS;Estadual;ARTESP;SP;SP;;;Concessão comum;;;Lote 11;L11|RENOVIAS;;;-22.37;-46.94
 S-L13;COLINAS;Estadual;ARTESP;SP;SP;;;Concessão comum;;;Lote 13;L13|COLINAS;;03025305000146;-23.1;-47.7
-S-L16;CART;Estadual;ARTESP;SP;SP;;;Concessão comum;;;Lote 16;L16|CART;;10531501000158;-22.6;-50.4
+S-L16;CART;Estadual;ARTESP;SP;SP;;;Concessão comum;Pátria;patria.com 2019 / DF CART 2024 (IBH II);Lote 16;L16|CART;;10531501000158;-22.6;-50.4
 S-L19;VIARONDON;Estadual;ARTESP;SP;SP;;;Concessão comum;;;Lote 19;L19|VIARONDON;;;-21.67;-49.75
 S-L20;SPVIAS;Estadual;ARTESP;SP;SP;;;Concessão comum;Motiva;conhecimento_previo_validar;Lote 20;L20|SPVIAS;;;-23.59;-48.05
 S-L21;RODOVIAS DO TIETÊ;Estadual;ARTESP;SP;SP;;;Concessão comum;;;Lote 21;L21|RODOVIAS DO TIETE;;10678505000163;-22.73;-48.1
