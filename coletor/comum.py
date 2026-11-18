@@ -23,7 +23,12 @@ REGIAO_POR_UF = {
 }
 
 SESSAO = requests.Session()
-SESSAO.headers["User-Agent"] = "coletor-concessoes (pricediscovery)"
+SESSAO.headers.update({
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/130.0 Safari/537.36 coletor-concessoes",
+    "Accept": "application/json,text/csv,*/*",
+    "Accept-Language": "pt-BR,pt;q=0.9",
+})
 
 
 def baixar(url: str, tentativas: int = 4, timeout: int = 600) -> bytes:
@@ -32,7 +37,8 @@ def baixar(url: str, tentativas: int = 4, timeout: int = 600) -> bytes:
     for i in range(tentativas):
         try:
             r = SESSAO.get(url, timeout=timeout)
-            r.raise_for_status()
+            if r.status_code >= 400:
+                raise RuntimeError(f"HTTP {r.status_code}: {r.text[:300]!r}")
             return r.content
         except Exception as e:  # noqa: BLE001
             ultimo = e
