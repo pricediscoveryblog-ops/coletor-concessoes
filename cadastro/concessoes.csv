@@ -13,33 +13,33 @@ F-CONCER;CONCER;Federal;ANTT;RJ;RJ/MG;180;BR-040;Concessão comum;Triunfo;conhec
 F-NRO;NOVA ROTA DO OESTE;Federal;ANTT;MT;MT;868;BR-163/BR-364/BR-070;Concessão comum;;;;NOVA ROTA DO OESTE|CRO;CRO renomeada Nova Rota do Oeste (validar)
 F-CRT;CRT;Federal;ANTT;RJ;RJ;;BR-116;Concessão comum;;;;CRT;Sem dados após 2022
 F-EMG;ECOVIAS MINAS GOIÁS;Federal;ANTT;MG;MG/GO;438;BR-050;Concessão comum;Ecorodovias;conhecimento_previo_validar;;ECOVIAS MINAS GOIÁS|ECO050|MGO;Cadeia MGO > Eco050 > Ecovias Minas Goiás (validar)
-F-ECAP;ECOVIAS CAPIXABA;Federal;ANTT;ES;ES;470;BR-101;Concessão comum;Ecorodovias;conhecimento_previo_validar;;ECOVIAS CAPIXABA|ECO101|ECOVIAS101;Eco101 > Ecovias Capixaba (contrato otimizado 2025 - validar)
+F-ECAP;ECOVIAS CAPIXABA;Federal;ANTT;ES;ES;470;BR-101;Concessão comum;Ecorodovias;conhecimento_previo_validar;;ECOVIAS CAPIXABA|ECO101|ECOVIAS101|ECOVIAS 101|ECO101 CONCESSIONARIA DE RODOVIAS S/A;Eco101 > Ecovias Capixaba (contrato otimizado 2025 - validar)
 F-ECOSUL;ECOSUL;Federal;ANTT;RS;RS;457;BR-392/BR-116;Concessão comum;Ecorodovias;conhecimento_previo_validar;;ECOSUL|ECOVIAS SUL;
 F-EGER;ECOVIAS DAS GERAIS;Federal;ANTT;MG;MG;735;BR-116/BR-251;Concessão comum;Ecorodovias;conhecimento_previo_validar;;ECOVIAS DAS GERAIS;Sem tráfego publicado até a coleta
-F-EARA;ECOVIAS DO ARAGUAIA;Federal;ANTT;GO;TO/GO;852;BR-153/BR-080/BR-414;Concessão comum;Ecorodovias;conhecimento_previo_validar;;ECOVIAS DO ARAGUAIA;
+F-EARA;ECOVIAS DO ARAGUAIA;Federal;ANTT;GO;TO/GO;852;BR-153/BR-080/BR-414;Concessão comum;Ecorodovias;conhecimento_previo_validar;;ECOVIAS DO ARAGUAIA|ECOVIAS ARAGUAIA;
 F-ECER;ECOVIAS DO CERRADO;Federal;ANTT;GO;GO/MG;436;BR-364/BR-365;Concessão comum;Ecorodovias;conhecimento_previo_validar;;ECOVIAS DO CERRADO;
-F-ERM;ECOVIAS RIO MINAS;Federal;ANTT;RJ;RJ/MG;724;BR-116/BR-493/BR-465;Concessão comum;Ecorodovias;conhecimento_previo_validar;;ECOVIAS RIO MINAS|ECOVIAS RIOMINAS|ECORIOMINAS;
+F-ERM;ECOVIAS RIO MINAS;Federal;ANTT;RJ;RJ/MG;724;BR-116/BR-493/BR-465;Concessão comum;Ecorodovias;conhecimento_previo_validar;;ECOVIAS RIO MINAS|ECOVIAS RIOMINAS|ECORIOMINAS|ECO RIOMINAS;
 F-ELOVIAS;ELOVIAS;Federal;ANTT;MG;MG/RJ;181;BR-040/BR-495;Concessão comum;;;;ELOVIAS;Trecho da antiga Via 040 (validar)
 F-VCRI;VIA CRISTAIS;Federal;ANTT;MG;MG;595;BR-040;Concessão comum;;;;VIA CRISTAIS|VIA DOS CRISTAIS;Trecho da antiga Via 040 (validar)
 F-VIA040;VIA 040;Federal;ANTT;MG;DF/GO/MG;;BR-040;Concessão comum;Invepar;conhecimento_previo_validar;;VIA 040;Devolvida - DNIT reassumiu trecho
 F-EPRIGU;EPR IGUAÇU;Federal;ANTT;PR;PR;660;BR-277/BR-163/BR-158 + estaduais;Concessão comum;EPR;conhecimento_previo_validar;PRVias - trechos estaduais delegados à União;EPR IGUAÇU;
 F-EPRPR;EPR PARANÁ;Federal;ANTT;PR;PR;664;BR-376/BR-369 + estaduais;Concessão comum;EPR;conhecimento_previo_validar;PRVias - trechos estaduais delegados à União;EPR PARANÁ;
-F-LITPIO;LITORAL PIONEIRO;Federal;ANTT;PR;PR;604;BR-277/BR-369 + estaduais;Concessão comum;EPR;conhecimento_previo_validar;PRVias - trechos estaduais delegados à União;LITORAL PIONEIRO;
+F-LITPIO;LITORAL PIONEIRO;Federal;ANTT;PR;PR;604;BR-277/BR-369 + estaduais;Concessão comum;EPR;conhecimento_previo_validar;PRVias - trechos estaduais delegados à União;LITORAL PIONEIRO|EPR LITORAL PIONEIRO;
 F-VARAU;VIA ARAUCÁRIA;Federal;ANTT;PR;PR;460;BR-277/BR-373/BR-476 + estaduais;Concessão comum;;;PRVias - trechos estaduais delegados à União;VIA ARAUCÁRIA;
-F-MOTPR;MOTIVA PARANÁ;Federal;ANTT;PR;PR;570;BR-376/BR-373 + estaduais;Concessão comum;Motiva;conhecimento_previo_validar;PRVias - trechos estaduais delegados à União;MOTIVA PARANÁ;
+F-MOTPR;MOTIVA PARANÁ;Federal;ANTT;PR;PR;570;BR-376/BR-373 + estaduais;Concessão comum;Motiva;conhecimento_previo_validar;PRVias - trechos estaduais delegados à União;MOTIVA PARANÁ|PRVIAS|PR VIAS;Mesmas praças de PRVIAS (2025) na base da ANTT
 F-VCAMPO;VIA CAMPO;Federal;ANTT;PR;PR;420;BR-369/BR-163 + estaduais;Concessão comum;;;PRVias - trechos estaduais delegados à União;VIA CAMPO;
-F-EPRVM;EPR VIA MINEIRA;Federal;ANTT;MG;MG;233;BR-040;Concessão comum;EPR;conhecimento_previo_validar;;EPR VIA MINEIRA;
+F-EPRVM;EPR VIA MINEIRA;Federal;ANTT;MG;MG;233;BR-040;Concessão comum;EPR;conhecimento_previo_validar;;EPR VIA MINEIRA|VIA MINEIRA;
 F-N364;NOVA 364;Federal;ANTT;RO;RO;721;BR-364;Concessão comum;;;;NOVA 364;
 F-N381;NOVA 381;Federal;ANTT;MG;MG;304;BR-381;Concessão comum;;;;NOVA 381;
-F-PANT;PANTANAL;Federal;ANTT;MS;MS;846;BR-163;Concessão comum;Motiva;conhecimento_previo_validar;;PANTANAL|MSVIA;MSVia renomeada Motiva Pantanal (validar)
+F-PANT;PANTANAL;Federal;ANTT;MS;MS;846;BR-163;Concessão comum;Motiva;conhecimento_previo_validar;;PANTANAL|MSVIA|MSVIA/PANTANAL;MSVia renomeada Motiva Pantanal (validar)
 F-NDUTRA;NOVADUTRA;Federal;ANTT;SP;SP/RJ;;BR-116;Concessão comum;Motiva;conhecimento_previo_validar;;NOVADUTRA;Antecessora da RIOSP na BR-116
-F-RIOSP;RIOSP;Federal;ANTT;SP;SP/RJ;680;BR-116/BR-101;Concessão comum;Motiva;conhecimento_previo_validar;;RIOSP;
+F-RIOSP;RIOSP;Federal;ANTT;SP;SP/RJ;680;BR-116/BR-101;Concessão comum;Motiva;conhecimento_previo_validar;;RIOSP|RIO-SP;
 F-RACO;RODOVIA DO AÇO;Federal;ANTT;RJ;RJ;184;BR-393;Concessão comum;;;;RODOVIA DO AÇO;Sem tráfego publicado em 2026
 F-RVGO;ROTA VERDE GOIÁS;Federal;ANTT;GO;GO;426;BR-060/BR-452;Concessão comum;;;;ROTA VERDE GOIÁS|ROTA VERDE;
 F-TBRA;TRANSBRASILIANA;Federal;ANTT;SP;SP;325;BR-153;Concessão comum;;;;TRANSBRASILIANA;
 F-VBAHIA;VIA BAHIA;Federal;ANTT;BA;BA;;BR-116/BR-324;Concessão comum;;;;VIA BAHIA;Malha retornou ao DNIT (validar data)
-F-VBRASIL;VIA BRASIL;Federal;ANTT;MT;MT/PA;969;BR-163/BR-230;Concessão comum;Conasa/Zeta (consórcio);fonte_artigo_unesp_2022;;VIA BRASIL|VIABRASIL;
-F-VCOST;VIA COSTEIRA;Federal;ANTT;SC;SC;219;BR-101;Concessão comum;Motiva;conhecimento_previo_validar;;VIA COSTEIRA|VIACOSTEIRA;
+F-VBRASIL;VIA BRASIL;Federal;ANTT;MT;MT/PA;969;BR-163/BR-230;Concessão comum;Conasa/Zeta (consórcio);fonte_artigo_unesp_2022;;VIA BRASIL|VIABRASIL|CONCESSIONÁRIA VIA BRASIL BR-163;
+F-VCOST;VIA COSTEIRA;Federal;ANTT;SC;SC;219;BR-101;Concessão comum;Motiva;conhecimento_previo_validar;;VIA COSTEIRA|VIACOSTEIRA|CCR VIA COSTEIRA;
 F-VSUL;VIA SUL;Federal;ANTT;RS;RS;474;BR-290/BR-101/BR-386/BR-448;Concessão comum;Motiva;conhecimento_previo_validar;;VIA SUL;
 F-WAY153;WAY 153;Federal;ANTT;GO;GO/MG;526;BR-153/BR-262;Concessão comum;;;;WAY 153;
 F-WAY262;WAY 262;Federal;ANTT;MG;MG;440;BR-262;Concessão comum;;;;WAY 262;
