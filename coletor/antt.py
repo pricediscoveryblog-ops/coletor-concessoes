@@ -35,7 +35,11 @@ SIGICOR = [
 
 
 def recursos(pacote: str) -> list[dict]:
-    dados = json.loads(baixar(API + pacote, timeout=120))
+    bruto = baixar(API + pacote, timeout=120)
+    try:
+        dados = json.loads(bruto)
+    except json.JSONDecodeError as e:
+        raise RuntimeError(f"ANTT devolveu resposta não-JSON para {pacote}: {bruto[:400]!r}") from e
     return [r for r in dados["result"]["resources"] if (r.get("format") or "").upper() == "CSV"]
 
 
