@@ -1,3 +1,5 @@
 saidas/
 __pycache__/
 .pytest_cache/
+saidas_fin/
+cache_cvm/
