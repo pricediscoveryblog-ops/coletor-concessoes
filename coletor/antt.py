@@ -174,6 +174,7 @@ def coletar_sigicor() -> pd.DataFrame:
                 print(f"[ANTT] SIGICOR falhou {r['url']}: {e}", flush=True)
                 continue
             df.columns = [c.strip().lower() for c in df.columns]
+            df = df.loc[:, ~pd.Index(df.columns).duplicated()]
             df["conjunto"] = pacote
             df["arquivo"] = r["url"].rsplit("/", 1)[-1]
             partes.append(df)
