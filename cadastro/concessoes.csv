@@ -45,6 +45,9 @@ F-WAY153;WAY 153;Federal;ANTT;GO;GO/MG;526;BR-153/BR-262;Concessão comum;;;;WAY
 F-WAY262;WAY 262;Federal;ANTT;MG;MG;440;BR-262;Concessão comum;;;;WAY 262;
 F-WAY364;WAY 364;Federal;ANTT;GO;GO/MT;482;BR-364/BR-060;Concessão comum;;;;WAY 364;
 S-L01;AUTOBAN;Estadual;ARTESP;SP;SP;;SP-330/SP-348;Concessão comum;Motiva;conhecimento_previo_validar;Lote 01;L01|AUTOBAN;
+S-L03;TEBE;Estadual;ARTESP;SP;SP;;;Concessão comum;;;Lote 03;L03|TEBE;Lote antigo (dados até o fim do contrato)
+S-L09;TRIÂNGULO DO SOL;Estadual;ARTESP;SP;SP;;;Concessão comum;;;Lote 09;L09|TRIANGULO DO SOL;
+S-L12;VIAOESTE;Estadual;ARTESP;SP;SP;;SP-270/SP-280;Concessão comum;Motiva;conhecimento_previo_validar;Lote 12;L12|VIAOESTE;
 S-L06;INTERVIAS;Estadual;ARTESP;SP;SP;;;Concessão comum;Arteris;conhecimento_previo_validar;Lote 06;L06|INTERVIAS;
 S-L07;ROTA DAS BANDEIRAS;Estadual;ARTESP;SP;SP;;;Concessão comum;;;Lote 07;L07|ROTA DAS BANDEIRAS;
 S-L11;RENOVIAS;Estadual;ARTESP;SP;SP;;;Concessão comum;;;Lote 11;L11|RENOVIAS;
