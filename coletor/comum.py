@@ -25,20 +25,40 @@ REGIAO_POR_UF = {
 SESSAO = requests.Session()
 SESSAO.headers.update({
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-                  "(KHTML, like Gecko) Chrome/130.0 Safari/537.36 coletor-concessoes",
-    "Accept": "application/json,text/csv,*/*",
-    "Accept-Language": "pt-BR,pt;q=0.9",
+                  "(KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,application/json;q=0.8,*/*;q=0.7",
+    "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
 })
+_AQUECIDOS: set[str] = set()
+
+
+def _aquecer(url: str) -> None:
+    """Visita a página inicial do portal uma vez para receber cookies do firewall (F5)."""
+    base = "/".join(url.split("/")[:3])
+    if base in _AQUECIDOS:
+        return
+    _AQUECIDOS.add(base)
+    try:
+        SESSAO.get(base + "/", timeout=60)
+        SESSAO.headers["Referer"] = base + "/"
+    except Exception:  # noqa: BLE001
+        pass
 
 
 def baixar(url: str, tentativas: int = 4, timeout: int = 600) -> bytes:
     """Baixa um arquivo com novas tentativas (os portais públicos oscilam)."""
+    _aquecer(url)
     ultimo = None
     for i in range(tentativas):
         try:
             r = SESSAO.get(url, timeout=timeout)
             if r.status_code >= 400:
                 raise RuntimeError(f"HTTP {r.status_code}: {r.text[:300]!r}")
+            if b"Request Rejected" in r.content[:500]:
+                raise RuntimeError(f"Bloqueado pelo firewall do portal: {r.content[:300]!r}")
             return r.content
         except Exception as e:  # noqa: BLE001
             ultimo = e
