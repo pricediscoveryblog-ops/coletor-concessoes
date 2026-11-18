@@ -259,7 +259,7 @@ def coletar_acionistas(spe: pd.DataFrame, diag: dict) -> pd.DataFrame:
     cs, _uv, dv = _importar()
     cnpjs = set(spe.loc[spe["registro_cvm"], "cnpj"])
     norm = cs.norm
-    partes = []
+    partes, brutos = [], []
     for ano in (date.today().year, date.today().year - 1):
         try:
             p = cs.baixar(dv.FRE.format(ano=ano), cs.CACHE / f"fre_cia_aberta_{ano}.zip", forcar=ano == date.today().year)
@@ -288,11 +288,14 @@ def coletar_acionistas(spe: pd.DataFrame, diag: dict) -> pd.DataFrame:
             df["_v"] = pd.to_numeric(df[c_ver], errors="coerce")
             df = df[(df[c_dt] == df.groupby("_cnpj")[c_dt].transform("max"))]
             df = df[df["_v"] == df.groupby("_cnpj")["_v"].transform("max")]
+        brutos.append(df.drop(columns=[c for c in ("_v",) if c in df]).assign(ano_fre=ano, ordem_arquivo=range(len(df))).astype(str))
         partes.append(pd.DataFrame({
             "cnpj": df["_cnpj"], "ano_fre": ano, "data_referencia": df[c_dt] if c_dt else "",
             "acionista": df[c_ac].str.strip(), "cnpj_cpf_acionista": df[c_doc].map(cs.so_digitos) if c_doc else "",
             "participacao_pct": pd.to_numeric(df[c_pct].str.replace(",", "."), errors="coerce") if c_pct else np.nan,
             "controlador": df[c_ctrl].fillna("") if c_ctrl else ""}))
+    if brutos:   # todas as colunas do FRE (hierarquia de controle: IDs de acionista e de acionista relacionado)
+        pd.concat(brutos, ignore_index=True).to_parquet(SAIDA / "acionistas_fre_bruto.parquet", index=False)
     if not partes:
         return pd.DataFrame()
     a = pd.concat(partes, ignore_index=True)
