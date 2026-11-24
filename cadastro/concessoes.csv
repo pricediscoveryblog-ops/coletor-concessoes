@@ -70,10 +70,9 @@ S-L32;NOVO LITORAL;Estadual;ARTESP;SP;SP;;;Concessão patrocinada (PPP) - valida
 S-L33;ROTA SOROCABANA;Estadual;ARTESP;SP;SP;;;Concessão comum;Motiva;FRE 9.1.c via base de debêntures (controlada da Motiva);Lote 33;L33|ROTA SOROCABANA;;58484141000107;-22.95;-49.1
 S-L34;RAPOSO CASTELLO;Estadual;ARTESP;SP;SP;;SP-270/SP-280;Concessão comum;Ecorodovias;FRE 9.1.c via base de debêntures (controlada da Ecorodovias);Lote 34;L34|RAPOSO CASTELLO;;58607200000197;-23.62;-47.45
 S-L35;VIARAPOSO;Estadual;ARTESP;SP;SP;;SP-270;Concessão comum;;;Lote 35;L35|VIARAPOSO;;;-23.7;-47.1
-M-MG050;MG-050;Estadual;Artemig;MG;MG;;MG-050;Concessão patrocinada (PPP) - validar;;;;MG-050;Concessionária atual a validar;;-20.14;-44.88
+M-MG050;VIA NASCENTES (MG-050);Estadual;Artemig;MG;MG;371.4;MG-050/BR-265/BR-491;Concessão patrocinada (PPP);;;Sistema MG-050/BR-265/BR-491 (Juatuba-São Sebastião do Paraíso);MG-050|VIA NASCENTES|NASCENTES DAS GERAIS|CONCESSIONARIA DA RODOVIA MG-050;Unificada com a antiga M-VNASC: Via Nascentes é a concessionária atual do Sistema MG-050 (Agência Minas). CNPJ e modalidade patrocinada: Formulário de Referência 2024 da Concessionária da Rodovia MG-050 S.A.;08822767000108;-20.14;-44.88
 M-BR135;ECOVIAS NORTE MINAS;Estadual;Artemig;MG;MG;;BR-135 (delegada);Concessão comum;Ecorodovias;conhecimento_previo_validar;;ECOVIAS NORTE MINAS;;30265100000100;-16.73;-43.86
 M-TRI;EPR TRIÂNGULO;Estadual;Artemig;MG;MG;627.4;BR-452/BR-365 (delegadas) e estaduais;Concessão comum;EPR;fonte_agencia_minas;Lote Triângulo Mineiro;EPR TRIÂNGULO;;;-18.92;-48.28
 M-SUL;EPR SUL DE MINAS;Estadual;Artemig;MG;MG;454.3;;Concessão comum;EPR;fonte_agencia_minas;Lote Sul de Minas;EPR SUL DE MINAS;;;-22.23;-45.94
 M-VCAFE;EPR VIAS DO CAFÉ;Estadual;Artemig;MG;MG;432.8;;Concessão comum;EPR;fonte_agencia_minas;Lote 3 MG - Varginha-Furnas;EPR VIAS DO CAFÉ;;;-21.55;-45.43
 M-VLIB;VIA LIBERDADE;Estadual;Artemig;MG;MG;;;Concessão comum;;;;VIA LIBERDADE;;;;
-M-VNASC;VIA NASCENTES;Estadual;Artemig;MG;MG;;;Concessão comum;;;;VIA NASCENTES;Citada pela Artemig - lote a validar;;;
