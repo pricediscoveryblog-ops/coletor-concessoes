@@ -1,0 +1,18 @@
+{
+ "executado_em": "2026-11-24T20:53:22.779933+00:00",
+ "universo_dir": "/home/runner/work/coletor-concessoes/universo-setorial",
+ "blocos": {
+  "spe_cvm": "ok",
+  "financeiro": "ok",
+  "debentures": "ok",
+  "acionistas": "ok"
+ },
+ "sem_dfp_itr_estruturada": [
+  "02511048000190"
+ ],
+ "debentures": {
+  "quantidade": 70,
+  "emissores": 43,
+  "data_anbima": "2026-11-23"
+ }
+}
