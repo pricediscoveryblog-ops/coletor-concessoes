@@ -1,0 +1,78 @@
+id;inicio_concessao;precisao_inicio;prazo_anos;inicio_prazo_vigente;termino_contratual;situacao;fonte;obs
+F-AFL;2008-02-18;dia;22;2026-03-06;2048-03-06;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;Aditivo de modernização assinado em 06/03/2026: prazo de 22 anos contado do aditivo (Abertis divulga término em 2047).
+F-ALS;2008-02-18;dia;25;;2033-02-18;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-APS;2008-02-18;dia;25;;2033-02-18;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;"Ficha da ANTT sem o campo prazo; 25 anos = prazo dos contratos da 2ª etapa (mesmo edital de 2007; Mundys indica término em 2033)."
+F-ARB;2008-02-18;dia;25;;2033-02-18;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;Processo competitivo de modernização em andamento (edital 1/2026).
+F-AFD;2008-02-18;dia;25;;2026-05-11;sucedida;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;Contrato da Fernão Dias (Arteris) modernizado e transferido: segue como MOTIVA MINAS SP desde o aditivo de 11/05/2026.
+F-MMS;2008-02-18;dia;15;2026-05-11;2041-05-11;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;"Contrato original da Fernão Dias (início 2008); aditivo de modernização em 11/05/2026 com prazo de 15 anos contado do aditivo."
+F-CCRPONTE;1995-06-01;dia;20;;2015-06-01;encerrado;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;Contrato original da Ponte Rio-Niterói, sucedido pela Ecoponte em 2015.
+F-ECOPONTE;2015-06-01;dia;30;;2045-06-01;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-CONCEBRA;2014-03-05;dia;30;;2044-03-05;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;Em relicitação/processo competitivo de modernização (edital 3/2026): término pode mudar.
+F-CONCEPA;1997-07-04;dia;20;;2017-07-04;encerrado;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-CONCER;1996-03-01;dia;25;;2021-03-01;encerrado;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;Prazo contratual original vencido em 2021.
+F-NRO;2014-03-21;dia;30;;2044-03-21;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-CRT;1996-03-22;dia;25;;2021-03-22;encerrado;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-EMG;2014-01-08;dia;30;;2044-01-08;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;Término 07/01/2044 também em apresentação da ANTT à Câmara (2023).
+F-ECAP;2013-05-10;dia;24;2025-08-26;2049-08-26;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;Aditivo de modernização em 26/08/2025: prazo de 24 anos contado do aditivo.
+F-ECOSUL;1998-11-30;dia;28;;2026-11-30;encerrado;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;ANTT lista como contrato encerrado.
+F-EGER;;;30;;;a iniciar;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;"Contrato assinado em 03/06/2026; ANTT ainda sem data de início (termo de arrolamento)."
+F-EARA;2021-10-08;dia;35;;2056-10-08;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-ECER;2020-01-20;dia;30;;2050-01-20;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-ERM;2022-09-22;dia;30;;2052-09-22;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-ELOVIAS;2025-11-04;dia;30;;2055-11-04;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-VCRI;2025-03-10;dia;30;;2055-03-10;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-VIA040;2014-04-22;dia;30;;2023-08-18;encerrado;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;"Devolvida (relicitação): término em 18/08/2023 segundo apresentação da ANTT à Câmara (2023); trecho repartido entre Elovias e Via Cristais."
+F-EPRIGU;2025-05-08;dia;30;;2055-05-08;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-EPRPR;2026-03-09;dia;30;;2056-03-09;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-LITPIO;2024-02-28;dia;30;;2054-02-28;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-VARAU;2024-02-28;dia;30;;2054-02-28;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-MOTPR;2025-05-08;dia;30;;2055-05-08;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;Ficha 'PR Vias' (Motiva) na ANTT.
+F-VCAMPO;2026-04-16;dia;30;;2056-04-16;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;Ficha 'Via Campos' na ANTT.
+F-EPRVM;2024-08-06;dia;30;;2054-08-06;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-N364;2025-08-21;dia;30;;2055-08-21;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-N381;2025-02-06;dia;30;;2055-02-06;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-PANT;2014-04-11;dia;29;2025-08-01;2054-08-01;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;Aditivo de modernização em 01/08/2025: 29 anos contados do aditivo (Motiva divulga término em 2054).
+F-NDUTRA;1996-03-01;dia;25;;2021-03-01;encerrado;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;Sucedida pela RIOSP em 2022.
+F-RIOSP;2022-03-01;dia;30;;2052-03-01;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-RACO;2008-03-28;dia;25;;2033-03-28;encerrado;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;"Caducidade declarada (ANTT); data de extinção não usada no cálculo."
+F-RVGO;2025-04-28;dia;30;;2055-04-28;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-TBRA;2008-02-18;dia;25;;2033-02-18;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-VBAHIA;2009-10-20;dia;25;;2034-10-20;encerrado;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;"Malha retornou ao DNIT antes do prazo contratual (data de extinção a validar); sucedida pela 116 Sertões (contrato de 29/09/2026)."
+F-VBRASIL;2022-05-04;dia;10;;2032-05-04;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;"Contrato de transição de 10 anos; processo competitivo de modernização em curso (edital 2/2026)."
+F-VCOST;2020-08-07;dia;30;;2050-08-07;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-VSUL;2019-02-15;dia;30;;2049-02-15;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-WAY153;2026-03-26;dia;30;;2056-03-26;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;Ficha 'Rota Sertaneja' (Way) na ANTT.
+F-WAY262;2025-03-20;dia;30;;2055-03-20;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;
+F-WAY364;2026-04-01;dia;30;;2056-04-01;vigente;ANTT - ficha da concessão (gov.br/antt, lista de concessões), consultada em 25/11/2026;Ficha 'Rota Agro' (Way) na ANTT.
+S-L01;1998-05-01;mês;40;;2038-05-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;Prazo de 40 anos já com aditivos (ARTESP). Artigo do TCE-SP cita prorrogação até 2037.
+S-L03;1998-03-01;mês;27;;2025-03-01;encerrado;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;ARTESP: término em 03/2025.
+S-L09;;;;;;encerrado;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;"Fora da lista de concessionárias vigentes da ARTESP; datas não localizadas (sistema remanescente incorporado a novo lote pelo Decreto 66.814/2022 - a validar)."
+S-L12;1998-03-01;mês;;;2025-03-29;encerrado;Motiva - página da ViaOeste (rodovias.motiva.com.br/viaoeste), consultada em 25/11/2026;"Concessão desde 1998 (mês aproximado); término em 29/03/2025 segundo a Motiva."
+S-L06;2000-02-01;mês;39;;2039-02-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;Prazo de 39 anos com aditivos.
+S-L07;2009-04-01;mês;30;;2039-04-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+S-L11;1998-04-01;mês;28;;2026-10-31;encerrado;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;Termo Aditivo 27/2026 prorrogou até 31/10/2026 para a transição à Rota Mogiana (fato relevante da Motiva, 01/07/2026).
+S-L13;2000-03-01;mês;28;;2028-03-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+S-L16;2009-03-01;mês;30;;2039-03-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+S-L19;2009-05-01;mês;30;;2039-05-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+S-L20;2000-02-01;mês;30;;2030-10-21;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;Aditivos de reequilíbrio estenderam o término para 21/10/2030 (Agência iNFRA, 14/11/2025).
+S-L21;2009-04-01;mês;30;;2039-04-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+S-L22;1998-05-01;mês;36;;2034-05-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;Prazo de 36 anos com aditivos (TAM de 2021 e posteriores).
+S-L23;2009-06-01;mês;36;;2045-06-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;Prazo de 36 anos com aditivos.
+S-L24;2008-06-01;mês;30;;2038-06-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+S-L25;2011-03-01;mês;45;;2056-03-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+S-L26;2023-08-01;mês;30;;2053-08-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+S-L27;2015-04-01;mês;30;;2045-04-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+S-L28;2017-06-01;mês;40;;2057-06-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+S-L29;2017-10-01;mês;30;;2047-10-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+S-L30;2020-05-01;mês;30;;2050-05-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+S-L31;2023-05-01;mês;30;;2053-05-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+S-L32;2024-06-01;mês;30;;2054-06-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;Página 'CNL' (Novo Litoral) na ARTESP.
+S-L33;2025-02-01;mês;30;;2055-02-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+S-L34;2025-03-01;mês;30;;2055-03-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+S-L35;2026-02-01;mês;30;;2056-02-01;vigente;ARTESP - página da concessionária (artesp.sp.gov.br/setor-regulado/rodovia/concessionarias), consultada em 25/11/2026;
+M-MG050;2007-06-01;mês;25;;2032-06-01;vigente;Formulário de Referência 2024 da Concessionária da Rodovia MG-050 (PPP, 25 anos com início em junho de 2007);PPP (concessão patrocinada).
+M-BR135;2018-07-01;mês;30;;2048-07-01;vigente;"Agência Minas (31/03/2020: concessionária assumiu em julho de 2018; contrato de 30 anos)";
+M-TRI;2023-02-24;dia;30;;2053-02-24;vigente;"Agência Minas (Seinfra autorizou o início da administração em 24/02/2023; prazo de 30 anos)";
+M-SUL;2023-03-03;dia;30;;2053-03-03;vigente;"Agência Minas (administrada pela EPR Sul de Minas desde 03/03/2023; 30 anos)";
+M-VCAFE;2023-10-23;dia;30;;2053-10-23;vigente;"Agência Minas (EPR Vias do Café assumiu em 23/10/2023; 30 anos)";
+M-VLIB;2026-03-20;dia;30;;2056-03-20;vigente;"Agência Minas (início da operação da Via Liberdade em 20/03/2026; prazo de 30 anos - SNTR)";
