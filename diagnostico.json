@@ -1,0 +1,13 @@
+{
+ "executado_em": "2026-11-25T19:05:28.175837+00:00",
+ "blocos": {
+  "antt_trafego": "ok",
+  "antt_anuais": "ok",
+  "antt_pracas_trechos": "ok",
+  "antt_receita_praca": "ok",
+  "antt_sigicor": "ok",
+  "artesp_trafego": "ok"
+ },
+ "sem_cadastro": {},
+ "artesp_arquivos": []
+}
